@@ -1,0 +1,12 @@
+# app:
+#     resource: '@AppBundle/Controller/'
+#     type: annotation
+
+default:
+    resource: "@xrpgBundle/Controller/DefaultController.php"
+    type:     annotation
+
+api:
+    type:     rest
+    resource: "@xrpgBundle/Resources/config/routing.yml"
+    # prefix: /api
