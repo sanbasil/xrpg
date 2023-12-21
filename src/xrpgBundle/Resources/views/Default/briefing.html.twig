@@ -1,0 +1,23 @@
+<div class="row container-fluid" id="prueba">
+  <div class="col-12 border border-light">
+    {[misionData.mis[0].nombre]} | <span ng-class="aplicaClaseBadgeMision(mision.mis[0].idtipomision)">{[misionData.mis[0].tmision]}</span> | {[misionData.mis[0].experiencia]}exp
+  </div>
+</div>
+<div class="row container-fluid">
+  <div class="col-12 border border-light">
+    {[misionData.char_main[0].nivel]} | {[misionData.char_main[0].nombre]}<span ng-repeat="vir in misionData.char_vir "> | {[vir.descripcion]} </span> 
+    <button class="btn btn-sm btn-success float-right" aria-haspopup="true" aria-expanded="false"  ng-click="open()">
+      Objetos
+    </button> 
+  </div>
+</div>
+<div class="row container-fluid">
+  <div class="col-12 border border-light">
+    {[misionData.mans[0].nivel]} | {[misionData.mans[0].nombre]} | {[misionData.mans[0].tamano]}cms | {[misionData.mans[0].cc_actual]}cc | {[misionData.mans[0].ritmo]}
+  </div>
+  <button class="btn btn-sm btn-success" aria-haspopup="true" aria-expanded="false"  ui-sref="briefing.playMisionCamp({ playData: misionData })">
+      Empezar
+    </button> 
+</div>
+<div class="row container-fluid" ui-view="tablero">
+</div>

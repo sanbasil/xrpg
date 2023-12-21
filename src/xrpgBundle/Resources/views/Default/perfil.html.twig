@@ -1,0 +1,31 @@
+<div class="row container-fluid">
+    <div class="col-sm-3">
+        <div>Nivel {[characterData.char.nivel]}</div>
+        <div>Exp. {[characterData.char.experiencia]}/{[characterData.char.rango]}</div>
+        <div class="progress mt-1">
+            <div class="text-left bg-pb-perfil text-dark progress-bar" role="progressbar" style="width:{[characterData.char.estamina]}%" aria-valuenow="{[characterData.char.estamina]}" aria-valuemin="0" aria-valuemax="100"> {[characterData.char.estamina]}%</div>
+        </div>
+        <div class="btn btn-primary mt-1" ui-sref="preplay({ idchar: characterData.char.id })">Jugar</div>
+    </div>
+    <div class="col-sm-3">
+        <div ng-repeat="acts in characterData.acts">
+            <div class="progress mt-3" style="height: 20px;">
+                <div class="text-left bg-pb-perfil text-dark progress-bar" role="progressbar" style="width:{[acts.tendencia]}%" aria-valuenow="{[acts.tendencia]}" aria-valuemin="0" aria-valuemax="100">{[acts.descripcion]} {[acts.tendencia]}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div ng-repeat="assets in characterData.assets">
+            <div class="progress mt-3" style="height: 20px;">
+                <div class="text-left bg-pb-perfil text-dark progress-bar" role="progressbar" style="width:{[assets.valor]}%" aria-valuenow="{[assets.valor]}" aria-valuemin="0" aria-valuemax="100">{[assets.descripcion]} {[assets.valor]}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div ng-repeat="tipojuego in characterData.tipojuego">
+            <div class="progress mt-3" style="height: 20px;">
+                <div class="text-left bg-pb-perfil text-dark progress-bar" role="progressbar" style="width:{[tipojuego.probabilidad]}%" aria-valuenow="{[tipojuego.valor]}" aria-valuemin="0" aria-valuemax="100">{[tipojuego.descripcion]} {[tipojuego.valor]}</div>
+            </div>
+        </div>
+    </div>
+</div>

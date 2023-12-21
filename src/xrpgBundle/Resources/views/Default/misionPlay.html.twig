@@ -1,0 +1,37 @@
+<div class="row container-fluid">
+  <div class="col-12 border border-light">
+    <div id='prog-bar-cont'>
+      <div id="prog-bar">
+        <div id="background"></div>
+      </div>
+    </div>
+
+    <div class="progress">
+  <small></small>
+  <div class="progress-done">    
+  </div>
+</div>
+
+    <div ng-repeat= "mans in played.data.mans">
+        {[mans.nombre]}
+    </div>
+    <div ng-repeat= "actions in played.data.actions">
+        {[actions.cantidad]} {[actions.descripcion]}
+    </div>
+    <div ng-repeat= "tipoc in played.data.tipo_c">
+        {[played.data.mans[tipoc.idman].nombre]} -> {[tipoc.descripcion]}
+    </div>
+    <div>
+      Duración: {[played.data.duracion]}
+    </div>
+    <div>
+      Orgs: {[played.data.orgs]}
+    </div>
+    <div>  
+      Puntos: {[played.data.puntos]}
+    </div>
+    <div>  
+      TAM: {[played.data.tam]}
+    </div>
+  </div>
+</div>

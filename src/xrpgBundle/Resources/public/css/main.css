@@ -1,0 +1,22 @@
+.avatar{
+    background: url("../../../img/avatars/icontest.png") repeat-x scroll 0 0;
+    width:25px;
+    height:25px;
+    float:left;
+}
+.modal.fade.in {
+    opacity: 1;
+ }
+ .modal.fade .modal-dialog {
+    transform: translate(0, 0) !important;
+ }
+ 
+ .modal-backdrop.fade {
+   opacity: 0.5 !important;
+  }
+ .modal-header{
+    display: block;
+ }
+ .modal-content{
+    border-radius: 1.3rem !important;
+ }

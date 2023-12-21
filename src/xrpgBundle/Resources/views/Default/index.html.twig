@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <div ng-controller="charactersController" ng-model="characterData">
+        <nav class="navbar navbar-expand-lg"  style="background-color: #ff43ab;">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" ui-sref="home">Home</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Campañas
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" ui-sref="crearCampaign" ui-sref-active="active" >Crear</a>
+                            <a class="dropdown-item" ui-sref="editarCampaign" ui-sref-active="active">Editar</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Misiones
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" ui-sref="crearMision" ui-sref-active="active" >Crear</a>
+                            <a class="dropdown-item" ui-sref="editarMision" ui-sref-active="active">Editar</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Companions
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" ui-sref="crearMans" ui-sref-active="active" >Crear</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Jugadores
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a ng-repeat="option in charactersList" class="dropdown-item" ui-sref="character({ idchar: option.id })">{[option.nombre]}</a>                       
+                        </div>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/character/{[characterData.char.id]}" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {[characterData.char.nombre]} <img ng-src="../img/avatars/{[characterData.char.imagen]}" class="float-right" height="25px" />
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item">Perfil</a>
+                            <a class="dropdown-item">Histórico</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div ui-view="main">
+            
+        </div>
+    </div>
+
+{#<form ng-controller="charactionsController">#}
+    {#<div>#}
+        {#<div ng-model="characterData">#}
+            {#{[characterData.nombre]}#}
+        {#</div>#}
+
+        {#<select ng-model="listaActions" ng-change="action(listaActions)">#}
+            {#<option ng-repeat="option in actionsList" ng-value="option.id" >{[option.descripcion]}</option>#}
+        {#</select>#}
+        {#<div ng-model="actionData">#}
+            {#{[actionData.descripcion]}#}
+        {#</div>#}
+
+        {#<input type="text" ng-model="tendencia">#}
+    {#</div>#}
+    {#<input type="button" value="Submit" ng-click="insertData()" />#}
+    {#<input type="button" value="All Acts" ng-click="getAllCharAct(listaCharacters)" />#}
+    {#<div>#}
+        {#<ul>#}
+            {#<li ng-repeat="option in allCharAct">#}
+                {#{[option.nombre]} - {[option.descripcion]} - {[option.tendencia]}#}
+            {#</li>#}
+        {#</ul>#}
+    {#</div>#}
+{#</form>#}
+{% endblock %}

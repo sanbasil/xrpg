@@ -1,0 +1,99 @@
+<div class="row">
+    <div class="col-sm-12">
+        <h3>Nueva Misión</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-4">
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="tipomis">Tipo Misón</label>
+                <select class="form-control form-control-sm" name="tipomis" id="tipomis">
+
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control form-control-sm" name="nombre" id="nombre">
+            </div>
+
+            <div class="form-group">
+                <label for="desc">Descripción</label>
+                <input type="number" class="form-control form-control-sm" name="desc" id="desc">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="nivel">Nivel</label>
+                    <input type="number" class="form-control form-control-sm" name="nivel" id="nivel">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="exp">Experiencia</label>
+                    <input type="number" class="form-control form-control-sm" name="exp" id="exp">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="nummax">Max Mans</label>
+                    <input type="number" class="form-control form-control-sm" name="experiencia" id="experiencia">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="currencynec">Currency Nec</label>
+                    <input type="number" class="form-control form-control-sm" name="currencynec" id="currencynec">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="currencyval">Currency Val</label>
+                    <input type="number" class="form-control form-control-sm" name="currencyval" id="currencyval">
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label for="orden">Orden</label>
+                    <input type="number" class="form-control form-control-sm" name="orden" id="orden">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="iteraciones">Iteraciones</label>
+                <input type="number" class="form-control form-control-sm" name="iteraciones" id="iteraciones">
+            </div>
+
+            <div class="form-group">
+                <label for="campaign">Campaña</label>
+                <select class="form-control form-control-sm" name="campaign" id="campaign">
+
+                </select>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <h5>Mans</h5>
+                </div>
+            </div>
+            <section ng-repeat="man in mans">
+                <div class="form-group">
+                    <label for="profesiones">Profesiones</label>
+                    <select class="form-control form-control-sm" name="profesiones" id="profesiones">
+
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mans">Mans</label>
+                    <select class="form-control form-control-sm" name="mans" id="mans">
+
+                    </select>
+                </div>
+            </section>
+            
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Guardar</button>  
+            </div>
+        </form>
+        <button ng-click="addMan()">Add Man</button>
+    </div>
+</div>

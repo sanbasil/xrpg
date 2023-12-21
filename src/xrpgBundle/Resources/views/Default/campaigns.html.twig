@@ -1,0 +1,73 @@
+<div class="row container-fluid" id="campaign">
+    <div class="col-sm-12 mt-1">
+        <img ng-src="../img/campaigns/{[campaign[0].imagen]}" class="float-left mr-1" height="50px" /> 
+        <span class="h1">{[campaign[0].campaign]}</span>
+        <button class="btn btn-sm btn-success float-right" ng-if="!campaign[0].estado" aria-haspopup="true" aria-expanded="false" ng-click="joinCampaign(campaign[0].id,idchar)">
+            Empezar
+        </button>    
+        <button class="btn btn-sm btn-primary float-right" ng-if="campaign[0].estado" aria-haspopup="true" aria-expanded="false" ng-click="joinCampaign(campaign[0].id,idchar)">
+            En curso
+        </button>     
+    </div>
+</div>
+<div class="row mt-1 container-fluid">
+    <div class="col-sm-12">
+    <span>Misiones</span>
+        <table class="table table-striped tabla-sm">
+            <tr>
+                <th>
+                    #
+                </th>
+                <th>
+                    Misión
+                </th>
+                <th>
+                    Descripción
+                </th>
+                <th>
+                    Iteraciones
+                </th>
+                <th>
+                    Coste
+                </th>
+                <th>
+                    Nivel
+                </th>
+                <th>
+                    Recompensa
+                </th>
+                <th>
+                    Disponible
+                </th>
+            </tr>
+            <tr ng-repeat="detalle in campaign">
+                <td>
+                    {[detalle.orden]}
+                </td>
+                <td>
+                    {[detalle.mision]} <span ng-class="aplicaClaseBadgeMision(detalle.idtipomision)">{[detalle.tipomision]}</span>
+                </td>
+                <td>
+                    {[detalle.misiondesc]}
+                </td>
+                <td>
+                    {[detalle.iteraciones]}
+                </td>
+                <td>
+                    {[detalle.currencyNec]}
+                </td>
+                <td>
+                    {[detalle.nivel]}
+                </td>
+                <td>
+                    {[detalle.recompensa]}
+                </td>
+                <td>
+                    <button class="btn btn-sm btn-success float-right" aria-haspopup="true" aria-expanded="false"  ui-sref="briefing({ idchar: idchar, idcamp: campaign[0].id, idmision: detalle.idmision })">
+                        Jugar
+                    </button> 
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+services:
+    xrpg.charactersService:
+      class: 'xrpgBundle\Services\charactersService'
+      arguments: ['@doctrine.orm.entity_manager' ,'@service_container']
+
+    xrpg.actionsService:
+      class: 'xrpgBundle\Services\actionsService'
+      arguments: ['@doctrine.orm.entity_manager' ,'@service_container']
+
+    xrpg.playService:
+      class: 'xrpgBundle\Services\playService'
+      arguments: ['@doctrine.orm.entity_manager' ,'@service_container']
+
+    xrpg.campaignsService:
+      class: 'xrpgBundle\Services\campaignsService'
+      arguments: ['@doctrine.orm.entity_manager' ,'@service_container']
+
+    xrpg.misionService:
+      class: 'xrpgBundle\Services\misionService'
+      arguments: ['@doctrine.orm.entity_manager' ,'@service_container']
+
+    xrpg.mansService:
+      class: 'xrpgBundle\Services\mansService'
+      arguments: ['@doctrine.orm.entity_manager' ,'@service_container']
+
+    xrpg.objectsService:
+      class: 'xrpgBundle\Services\objectsService'
+      arguments: ['@doctrine.orm.entity_manager' ,'@service_container']

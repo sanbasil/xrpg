@@ -1,0 +1,20 @@
+<div class="row container-fluid">
+  <div class="col-12">
+    <table class="table table-bordered table-striped">
+      <tr ng-repeat="o in objectsList">
+        <td><img ng-src="../img/icons/objetos/{[o.icon]}" /></td>
+        <td>{[o.nombre]}</td>
+        <td>{[o.efecto]}</td>
+        <td><input type="checkbox" ng-model="objetouso"
+           ng-true-value="1" ng-false-value="0"></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="row container-fluid">
+  <div class="col-12">
+    <button class="btn btn-sm btn-success float-right" aria-haspopup="true" aria-expanded="false"  ng-click="close()">
+      Cerrar
+    </button> 
+  </div>
+</div>

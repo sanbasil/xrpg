@@ -1,0 +1,29 @@
+characters:
+    type:     rest
+    resource: "@xrpgBundle/Controller/charactersController.php"
+    name_prefix: api_
+
+# xrpg_actions:
+#     type:     rest
+#     resource: "@xrpgBundle/Controller/actionsController.php"
+#     name_prefix: api_
+
+xrpg_play:
+    type:     rest
+    resource: "@xrpgBundle/Controller/playController.php"
+    name_prefix: api_
+
+xrpg_campaigns:
+    type:     rest
+    resource: "@xrpgBundle/Controller/campaignsController.php"
+    name_prefix: api_
+
+xrpg_mision:
+    type:     rest
+    resource: "@xrpgBundle/Controller/misionController.php"
+    name_prefix: api_
+
+xrpg_objetos:
+    type:     rest
+    resource: "@xrpgBundle/Controller/objectsController.php"
+    name_prefix: api_
